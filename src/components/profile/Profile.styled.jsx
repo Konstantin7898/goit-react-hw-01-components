@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div`
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-direction: column;
+`;
+
 export const Container = styled.div`
   width: 300px;
   heigth: 500px;

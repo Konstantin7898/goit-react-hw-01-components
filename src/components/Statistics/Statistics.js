@@ -1,20 +1,37 @@
 import PropTypes from 'prop-types';
-// import { Wrapper } from '../Statistics/Statistics.styled';
+
+import {
+  Container,
+  Label,
+  Percentage,
+  StatCardList,
+  StatList,
+  Title,
+} from '../Statistics/Statistics.styled';
 
 export const Statistics = ({ title, stats }) => {
-  return (
-    <section class="statistics">
-      {title && <h2>{title}</h2>}
+  const getRandomHexColor = () => {
+    return Math.floor(Math.random() * 16777215).toString(16);
+  };
 
-      <ul class="stat-list">
+  return (
+    <Container>
+      {title && <Title>{title}</Title>}
+
+      <StatList>
         {stats.map(({ id, label, percentage }) => (
-          <li key={id} label={label} percentage={percentage}>
-            <p>{label}</p>
-            <p>{percentage}</p>
-          </li>
+          <StatCardList
+            key={id}
+            label={label}
+            percentage={percentage}
+            color={getRandomHexColor()}
+          >
+            <Label>{label}</Label>
+            <Percentage>{percentage}</Percentage>
+          </StatCardList>
         ))}
-      </ul>
-    </section>
+      </StatList>
+    </Container>
   );
 };
 

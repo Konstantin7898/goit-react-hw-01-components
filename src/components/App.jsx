@@ -6,12 +6,13 @@ import { FriendList } from '../components/FriendList/FriendList';
 import friends from '../components/friends.json';
 import { TransactionHistory } from '../components/TransactionHistory/TransactionHistory';
 import transactions from '../components/transactions.json';
+import { Wrapper } from './profile/Profile.styled';
 
 export const App = () => {
   console.log(users);
 
   return (
-    <div
+    <Wrapper
     // style={{
     //   height: '100vh',
     //   display: 'flex',
@@ -32,6 +33,6 @@ export const App = () => {
       <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />;
       <TransactionHistory items={transactions} />;
-    </div>
+    </Wrapper>
   );
 };
