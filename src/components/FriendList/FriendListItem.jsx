@@ -4,7 +4,7 @@ export const FriendCard = ({ avatar, name, isOnline }) => {
   return (
     <FriendsCard>
       <Status isOnline={isOnline}>{isOnline}</Status>
-      <img src={avatar} alt="User avatar" width="48" />
+      <img src={avatar} alt="FriendCard" width="48" />
       <p>{name}</p>
     </FriendsCard>
   );
